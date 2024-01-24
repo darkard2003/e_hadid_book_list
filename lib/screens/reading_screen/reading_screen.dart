@@ -4,7 +4,6 @@ import 'package:e_hadid_book_list/screens/reading_screen/components/info_tile.da
 import 'package:e_hadid_book_list/screens/reading_screen/components/page_switcher.dart';
 import 'package:e_hadid_book_list/screens/reading_screen/components/settings_button.dart';
 import 'package:e_hadid_book_list/screens/reading_screen/components/settings_overlay_button.dart';
-import 'package:e_hadid_book_list/screens/reading_screen/components/settings_overlay.dart';
 import 'package:flutter/material.dart';
 
 class ReadingScreen extends StatefulWidget {
@@ -90,14 +89,10 @@ class _ReadingScreenState extends State<ReadingScreen> {
                 )
               ],
             ),
-            Positioned(
+            const Positioned(
               top: 35,
               right: 0,
-              child: SettingsMenuButton(
-                onPressed: () {
-                  showSettingsOverlay(context);
-                },
-              ),
+              child: SettingsMenuButtonOverlay(),
             )
           ],
         ),
